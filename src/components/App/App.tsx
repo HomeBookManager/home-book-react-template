@@ -6,12 +6,12 @@ import { BrowserRouter } from 'react-router-dom';
 import { history } from '../../store/configureStore';
 
 // styles
-import styles from './app.module.scss';
+import './app.scss';
 
 const App: FunctionComponent<{}> = () => (
   <BrowserRouter>
     <ConnectedRouter history={history}>
-      <div className={styles.app}>App</div>
+      <div className="App">App</div>
     </ConnectedRouter>
   </BrowserRouter>
 );
