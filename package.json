@@ -1,0 +1,141 @@
+{
+  "name": "home-book-manager-react-template",
+  "homepage": "https://HomeBookManager.github.io/<app-name>",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/enzyme": "^3.10.9",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-redux": "^7.1.18",
+    "@types/react-router-dom": "^5.3.0",
+    "@types/react-test-renderer": "^17.0.1",
+    "@types/redux-mock-store": "^1.0.3",
+    "@types/redux-persist": "^4.3.1",
+    "@types/styled-components": "^5.1.14",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.3",
+    "branch-name-lint": "^2.1.1",
+    "connected-react-router": "^6.9.1",
+    "cypress": "^8.5.0",
+    "enzyme": "^3.11.0",
+    "enzyme-to-json": "^3.6.2",
+    "gh-pages": "^3.2.3",
+    "history": "^5.0.1",
+    "lodash": "^4.17.21",
+    "node-sass": "^6.0.1",
+    "prettier": "^2.4.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.5",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "4.0.3",
+    "react-test-renderer": "^17.0.2",
+    "redux": "^4.1.1",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-mock-store": "^1.5.4",
+    "redux-observable": "^2.0.0",
+    "redux-persist": "^6.0.0",
+    "rxjs": "^7.3.1",
+    "sass-loader": "^12.1.0",
+    "stylelint-scss": "^3.21.0",
+    "typescript": "^4.1.2",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "build": "react-scripts build",
+    "cypress": "cypress run",
+    "cypress:browser": "cypress open",
+    "cypress:check": "cypress run --headed",
+    "deploy": "gh-pages -d build",
+    "eslint-ts": "eslint . --ext .ts --fix --max-warnings=0",
+    "eslint-tsx": "eslint . --ext .tsx --fix --max-warnings=0",
+    "predeploy": "npm run build",
+    "prepare": "husky install",
+    "prettier:check": "npx prettier --check .",
+    "prettier:write": "npx prettier --write .",
+    "start": "react-scripts start",
+    "test": "react-scripts test --watchAll",
+    "test:check": "react-scripts test --watchAll=false --passWithNoTests"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.32.0",
+    "@typescript-eslint/parser": "^4.32.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-react": "^7.26.1",
+    "husky": "^7.0.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0"
+  },
+  "branchNameLinter": {
+    "prefixes": [
+      "feature",
+      "bugfix",
+      "hotfix"
+    ],
+    "suggestions": {
+      "features": "feature",
+      "feat": "feature",
+      "fix": "hotfix",
+      "releases": "release"
+    },
+    "banned": [
+      "wip"
+    ],
+    "skip": [
+      "skip-ci"
+    ],
+    "disallowed": [
+      "master",
+      "develop",
+      "staging"
+    ],
+    "regex": "^((bugfix|feature|hotfix)/LW-([0-9]{4})((-([a-z]{1,})){1,})$)",
+    "regexOptions": "i",
+    "separator": "/",
+    "msgBranchBanned": "Branches with the name \"%s\" are not allowed.",
+    "msgBranchDisallowed": "Pushing to \"%s\" is not allowed, use git-flow.",
+    "msgPrefixNotAllowed": "Branch prefix \"%s\" is not allowed.",
+    "msgPrefixSuggestion": "Instead of \"%s\" try \"%s\".",
+    "msgseparatorRequired": "Branch \"%s\" must contain a separator \"%s\".",
+    "msgDoesNotMatchRegex": "Branch \"%s\" does not match the allowed pattern: \"%s\""
+  }
+}
